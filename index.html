@@ -14,16 +14,16 @@
 
     body {
       font-family: 'Noto Serif Bengali', serif;
-      background-color: #78A2D2; /* Light blue */
-      color: #333333;
+      background-color: #000000; /* Black background */
+      color: #ffffff;
     }
 
     .text-rangtuli {
-      color: #FBE48E; /* Yellow */
+      color: #FBE48E !important; /* Yellow for রংতুলি */
     }
 
     .bg-rangtuli {
-      background-color: #FBE48E;
+      background-color: #FBE48E !important; /* Yellow background for button */
     }
 
     .hover\:shadow-rangtuli:hover {
@@ -35,7 +35,7 @@
 <body class="min-h-screen flex flex-col">
 
   <!-- Header -->
-  <header class="bg-[#78A2D2] p-4 shadow-md">
+  <header class="bg-black p-4 shadow-md border-b border-gray-700">
     <nav class="flex justify-center space-x-6 font-medium">
       <a href="about.html" class="text-rangtuli border-b-2 border-rangtuli pb-1 transition duration-300">About Us</a>
       <a href="shop.html" class="text-white hover:text-rangtuli transition duration-300">Shop</a>
@@ -46,7 +46,7 @@
 
   <!-- Main Content -->
   <main class="flex-grow container mx-auto p-6 sm:p-10">
-    <section class="bg-[#fdfdfd] p-8 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-start lg:space-x-8">
+    <section class="bg-gray-900 p-8 rounded-2xl shadow-2xl flex flex-col lg:flex-row items-start lg:space-x-8">
 
       <!-- Image -->
       <div class="w-full lg:w-2/5 mb-6 lg:mb-0">
@@ -58,23 +58,28 @@
 
       <!-- Text -->
       <div class="w-full lg:w-3/5 text-left">
-        <h1 class="text-5xl sm:text-6xl font-extrabold text-rangtuli mb-6 tracking-wide">রংতুলি</h1>
-        <p class="text-lg sm:text-xl leading-relaxed text-gray-700">
+        <h1 class="text-7xl sm:text-8xl font-extrabold text-rangtuli mb-6 tracking-wide text-center">
+          রংতুলি
+        </h1>
+        <p class="text-lg sm:text-xl leading-relaxed text-gray-300 text-center">
           রংতুলি, located in Dhaka, is dedicated to showcasing the artistry of individuals — providing them with a
           platform to both create and sell their products. By providing both skills and opportunities, we wish to
           uplift the community, ensuring everyone lives with dignity and purpose.
         </p>
-        <a href="#" class="mt-6 inline-block bg-rangtuli text-gray-900 font-bold py-3 px-6 rounded-full shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5">
-          Learn More About Our Mission
-        </a>
+        <div class="flex justify-center">
+          <a href="#"
+             class="mt-8 inline-block bg-rangtuli text-black font-bold py-3 px-8 rounded-full shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5">
+            Learn More About Our Mission
+          </a>
+        </div>
       </div>
 
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#78A2D2] p-4 mt-auto text-center">
-    <p class="text-sm text-gray-800 font-medium">© 2025 রংতুলি | Creating Opportunities, Ending the Cycle of Poverty</p>
+  <footer class="bg-black p-4 mt-auto text-center border-t border-gray-700">
+    <p class="text-sm text-gray-400 font-medium">© 2025 রংতুলি | Creating Opportunities, Ending the Cycle of Poverty</p>
   </footer>
 
 </body>
