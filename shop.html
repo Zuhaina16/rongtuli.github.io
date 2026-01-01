@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>রংতুলি | Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <title>রংতুলি | About Us</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000000; /* Black background */
+      color: #ffffff;
+    }
+
+    .text-rangtuli {
+      color: #FBE48E; /* Yellow brand color */
+    }
+
+    .bg-header {
+      background-color: #78A2D2; /* Light blue header/footer */
+    }
+  </style>
 </head>
-<body>
+
+<body class="min-h-screen flex flex-col">
 
   <!-- Header -->
   <header class="bg-header p-4 shadow-lg">
@@ -17,6 +38,10 @@
       <a href="contact.html" class="text-white hover:text-rangtuli transition duration-300">Contact</a>
     </nav>
   </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto p-4 sm:p-8">
+    <section class="about-section bg-gray-900 p-6 sm:p-10 rounded-xl shadow-2xl">
   
 
   <section class="shop-section">
