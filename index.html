@@ -107,6 +107,54 @@
         });
     });
 </script>
+          <!-- Second Button -->
+<a id="plan-btn"
+   class="mt-6 inline-block bg-yellow-400 text-gray-900 text-rangtuli font-bold py-3 px-6 rounded-full shadow-xl transition duration-300 transform hover:bg-yellow-500 cursor-pointer">
+   How We Plan to Make it Happen
+</a>
+
+<!-- Hidden Section for the Plan -->
+<div id="plan-section" class="hidden mt-10 p-6 bg-gray-100 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-yellow-400 mb-4">How We Will Make It Happen</h2>
+
+    <ol class="list-decimal list-inside space-y-4 text-gray-800">
+        <li>
+            <strong>Workspace Setup:</strong> A workspace will be rented near the trainees’ communities for easy access and convenience.
+        </li>
+        <li>
+            <strong>Youth Involvement:</strong> Youths from the trainees’ households will be trained in accounting and delivery, creating additional job opportunities.
+        </li>
+        <li>
+            <strong>Resource Support:</strong> All essential materials — including sewing machines, threads, fabrics, and electricity — will be provided to remove financial pressure. Our estimate startup cost is 2.8 lakh- 5000tk per trainee. This includes second hand refurbished sewing machine, six month subsidised workspace access, and trainee salary. To secure this- we have a hybrid funding model. 70% from NGOs and UN-bodies, 30% from the government along with some community contributions. 
+        </li>
+        <li>
+            <strong>Commission Policy:</strong> Only a 10% commission will be taken for the first 500 pieces produced to help trainees become financially stable. This will serve as a Training Cost Recovery Fund for the organization, allowing us to recoup the initial investment per trainee. Once the trainee is certified and profitable, they shift to work on their own.
+        </li>
+    </ol>
+</div>
+
+<!-- Script for Both Buttons -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const learnMoreBtn = document.getElementById('learn-more-btn');
+        const learnMoreSection = document.getElementById('learn-more-section');
+
+        const planBtn = document.getElementById('plan-btn');
+        const planSection = document.getElementById('plan-section');
+
+        // Show/Hide first section
+        learnMoreBtn.addEventListener('click', () => {
+            learnMoreSection.classList.toggle('hidden');
+            learnMoreSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Show/Hide plan section
+        planBtn.addEventListener('click', () => {
+            planSection.classList.toggle('hidden');
+            planSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
         </div>
       </div>
     </section>
