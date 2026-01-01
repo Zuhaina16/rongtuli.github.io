@@ -72,6 +72,32 @@
              class="mt-6 inline-block bg-yellow-400 text-gray-900 text-rangtuli font-bold py-3 px-6 rounded-full shadow-xl transition duration-300 transform hover:bg-yellow-500">
              Learn More About Our Mission
           </a>
+          <div id="learn-more-section" class="hidden mt-10 p-6 bg-gray-100 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-yellow-400 mb-4">What We Provide</h2>
+    <ol class="list-decimal list-inside space-y-4 text-gray-800">
+        <li><strong>Training:</strong> We will appoint an experienced tailor and provide them with a salary. They will conduct 6-month training courses, teaching people from diverse backgrounds tailoring, stitching, and designing skills. Our goal is to ensure that every trainee becomes capable of earning independently by the end of the program.</li>
+        <li><strong>Funding:</strong> Through donations, micro-loans, and community contributions, we will offer financial support to trainees. This funding will help them purchase the materials and the tools needed to start their own small-scale work.</li>
+        <li><strong>Resources:</strong> We will provide access to machinery, workspace, delivery platforms, and other necessary resources so that trainees can focus on learning and producing without worrying about financial or logistical barriers.</li>
+        <li><strong>Online Platform:</strong> An online platform will be created to connect sellers (the trainees) directly with buyers. This platform will showcase their products and services, helping them reach a wider market and grow sustainably.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold text-yellow-400 mt-8 mb-4">What They Provide</h2>
+    <ol class="list-decimal list-inside space-y-4 text-gray-800">
+        <li><strong>Ability:</strong> We will train individuals in skills like stitching, tailoring, and fashion design to help them start their own service or small business. This can be conducted in schools after class hours, providing a safe environment for training.</li>
+        <li><strong>Computing:</strong> Providing hands-on computer training for youths so they can update stock and pricing efficiently.</li>
+        <li><strong>Accounting:</strong> Offering practical lessons in bookkeeping and small business accounting, enabling trainees to manage finances efficiently.</li>
+        <li><strong>Delivery Services:</strong> Creating further employment opportunities through logistics and delivery networks — training individuals in delivery systems, customer handling, and basic e-commerce operations.</li>
+    </ol>
+</div>
+          <script>
+    const learnMoreBtn = document.querySelector('#learn-more-btn');
+    const learnMoreSection = document.querySelector('#learn-more-section');
+
+    learnMoreBtn.addEventListener('click', () => {
+        learnMoreSection.classList.toggle('hidden');
+        learnMoreSection.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
         </div>
       </div>
     </section>
