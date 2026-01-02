@@ -126,8 +126,8 @@ header nav a:hover {
   transform: scale(1.05);
 }
 
-/* Donate Section */
-.donation-methods {
+/* Support Section */
+.support-methods {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
