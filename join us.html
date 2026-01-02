@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us | রংতুলি</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- HEADER -->
+  <header class="bg-blue-600 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-300">রংতুলি</h1>
+
+      <nav class="space-x-6">
+        <a href="index.html" class="hover:text-yellow-300">Home</a>
+        <a href="about.html" class="hover:text-yellow-300">About Us</a>
+        <a href="shop.html" class="hover:text-yellow-300">Shop</a>
+        <a href="donate.html" class="hover:text-yellow-300">Donate</a>
+        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+
+        <a href="join.html"
+           class="bg-yellow-300 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-200 transition">
+          Join Us
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+
+    <h2 class="text-3xl font-bold text-yellow-300 mb-4">
+      Join Our Mission — Be a Part of Poverty Alleviation
+    </h2>
+
+    <p class="text-gray-300 leading-relaxed mb-6">
+      রংতুলি এমন একটি উদ্যোগ যেখানে স্বেচ্ছাসেবক, শিল্পী, শিক্ষার্থী ও সামাজিকভাবে দায়িত্বশীল মানুষ একত্রে কাজ করে
+      সুবিধাবঞ্চিত সম্প্রদায়ের জন্য টেকসই সমাধান তৈরি করে। আপনি চাইলে আমাদের সাথে স্বেচ্ছাসেবক, টিম মেম্বার
+      অথবা কমিউনিটি অ্যাম্বাসেডর হিসেবে যুক্ত হতে পারেন।
+    </p>
+
+    <!-- VOLUNTEER SIGNUP FORM -->
+    <div class="bg-blue-900/40 border border-blue-500 rounded-xl p-6 mb-10">
+
+      <h3 class="text-2xl font-semibold text-yellow-300 mb-3">
+        Volunteer / Join Our Team
+      </h3>
+
+      <p class="text-gray-300 mb-4">
+        নিচের ফর্মটি পূরণ করুন — আমাদের টিম আপনার সাথে যোগাযোগ করবে।
+      </p>
+
+      <!-- Connect This to Google Forms -->
+      <!-- Replace FORM ACTION link when you create your Google Form -->
+      <form
+        action="YOUR_GOOGLE_FORM_LINK_HERE"
+        method="POST"
+        class="space-y-4"
+      >
+
+        <input type="text" name="name" placeholder="Your Full Name"
+               class="w-full px-4 py-2 rounded-lg text-black" required>
+
+        <input type="email" name="email" placeholder="Email Address"
+               class="w-full px-4 py-2 rounded-lg text-black" required>
+
+        <input type="text" name="phone" placeholder="Phone / WhatsApp Number"
+               class="w-full px-4 py-2 rounded-lg text-black">
+
+        <select name="role"
+                class="w-full px-4 py-2 rounded-lg text-black" required>
+          <option value="">Select How You Want to Join</option>
+          <option>Volunteer</option>
+          <option>Research & Project Team</option>
+          <option>Field Work & Distribution</option>
+          <option>Content / Art Contributor</option>
+          <option>Community Partner</option>
+        </select>
+
+        <textarea name="message" rows="4"
+                  placeholder="Tell us why you want to join"
+                  class="w-full px-4 py-2 rounded-lg text-black"></textarea>
+
+        <button type="submit"
+                class="bg-yellow-300 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-200 transition">
+          Submit & Join Us
+        </button>
+      </form>
+    </div>
+
+    <!-- QUICK CONTACT JOIN BUTTONS -->
+    <h3 class="text-2xl font-semibold text-yellow-300 mb-3">
+      Quick Join Options
+    </h3>
+
+    <div class="flex flex-wrap gap-4">
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/XXXXXXXXXXX"
+        class="bg-yellow-300 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-200 transition"
+        target="_blank">
+        Join via WhatsApp
+      </a>
+
+      <!-- Email -->
+      <a
+        href="mailto:rongtuli.project@gmail.com?subject=Join%20Rongtuli%20Volunteer%20Program"
+        class="bg-yellow-300 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-200 transition">
+        Email Us to Join
+      </a>
+
+      <!-- Google Form Button -->
+      <a
+        href="YOUR_GOOGLE_FORM_LINK_HERE"
+        class="bg-yellow-300 text-black px-5 py-3 rounded-lg font-semibold hover:bg-yellow-200 transition"
+        target="_blank">
+        Fill Google Form
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-600 mt-10">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-center">
+      <p class="text-sm text-white">
+        © 2026 রংতুলি — Empowering Communities Through Creativity
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
