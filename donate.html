@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>রংতুলি | Donate</title>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -13,17 +12,12 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #000000; /* Black background */
+      background-color: #000000;
       color: #ffffff;
     }
 
-    .text-rangtuli {
-      color: #FBE48E; /* Yellow brand color */
-    }
-
-    .bg-header {
-      background-color: #78A2D2; /* Light blue header/footer */
-    }
+    .text-rangtuli { color: #FBE48E; }
+    .bg-header { background-color: #78A2D2; }
   </style>
 </head>
 
@@ -31,42 +25,134 @@
 
   <!-- Header -->
   <header class="bg-header p-4 shadow-lg">
-    <nav class="flex justify-center space-x-4 sm:space-x-8 font-medium">
-      <a href="index.html" class="text-rangtuli border-b-2 border-rangtuli pb-1 transition duration-300">About Us</a>
-      <a href="shop.html" class="text-white hover:text-rangtuli transition duration-300">Shop</a>
-      <a href="donate.html" class="text-white hover:text-rangtuli transition duration-300">Donate</a>
-      <a href="contact.html" class="text-white hover:text-rangtuli transition duration-300">Contact</a>
+    <nav class="flex justify-center space-x-6 font-medium">
+      <a href="index.html" class="text-white hover:text-rangtuli">About Us</a>
+      <a href="shop.html" class="text-white hover:text-rangtuli">Shop</a>
+
+      <!-- Active Donate -->
+      <a href="donate.html"
+         class="text-rangtuli border-b-2 border-[#FBE48E] pb-1 font-semibold">
+         Donate
+      </a>
+
+      <a href="contact.html" class="text-white hover:text-rangtuli">Contact</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main class="flex-grow container mx-auto p-4 sm:p-8">
-    <section class="about-section bg-gray-900 p-6 sm:p-10 rounded-xl shadow-2xl">
+  <!-- Main -->
+  <main class="flex-grow container mx-auto p-6 sm:p-10">
+    <section class="bg-gray-900 p-6 sm:p-10 rounded-xl shadow-2xl text-center">
 
-  <section class="shop-section">
-    <h2>Support রংতুলি</h2>
-    <div class="donation-methods">
-      <div class="method">
-        <h3>Bkash</h3>
-        <p>018XXXXXXXX</p>
-      </div>
-      <div class="method">
-        <h3>Nagad</h3>
-        <p>017XXXXXXXX</p>
-      </div>
-      <div class="method">
-        <h3>Bank Transfer</h3>
-        <p>Account: Rongtuli Foundation</p>
-      </div>
-    </div>
-  </section>
+      <h2 class="text-rangtuli text-3xl font-bold mb-6">
+        Support রংতুলি
+      </h2>
 
-   <!-- Footer -->
+      <div class="grid gap-4 sm:grid-cols-3 mt-6">
+
+        <!-- BKASH -->
+        <div class="bg-[#1F2937] border border-gray-600 p-5 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Bkash</h3>
+
+          <p id="bkashNumber" class="text-rangtuli text-lg mb-4">
+            018XXXXXXXX
+          </p>
+
+          <div class="space-y-2">
+            <button onclick="copyNumber('bkashNumber')"
+              class="w-full border border-gray-500 rounded-md py-2 hover:scale-105 transition">
+              Copy Number
+            </button>
+
+            <button onclick="openQR('bkashQR')"
+              class="w-full border border-gray-500 rounded-md py-2 hover:scale-105 transition">
+              Show QR Code
+            </button>
+          </div>
+        </div>
+
+        <!-- NAGAD -->
+        <div class="bg-[#1F2937] border border-gray-600 p-5 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Nagad</h3>
+
+          <p id="nagadNumber" class="text-rangtuli text-lg mb-4">
+            017XXXXXXXX
+          </p>
+
+          <div class="space-y-2">
+            <button onclick="copyNumber('nagadNumber')"
+              class="w-full border border-gray-500 rounded-md py-2 hover:scale-105 transition">
+              Copy Number
+            </button>
+
+            <button onclick="openQR('nagadQR')"
+              class="w-full border border-gray-500 rounded-md py-2 hover:scale-105 transition">
+              Show QR Code
+            </button>
+          </div>
+        </div>
+
+        <!-- BANK -->
+        <div class="bg-[#1F2937] border border-gray-600 p-5 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Bank Transfer</h3>
+
+          <p class="text-rangtuli mb-2">
+            Rongtuli Foundation
+          </p>
+
+          <p id="bankAccount" class="text-sm mb-4">
+            Account No: 00000000000
+          </p>
+
+          <button onclick="copyNumber('bankAccount')"
+            class="w-full border border-gray-500 rounded-md py-2 hover:scale-105 transition">
+            Copy Account Details
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="bg-header p-4 mt-auto text-center">
     <p class="text-sm text-[#FBE48E] font-medium">
       © 2025 রংতুলি | Creating Opportunities, Ending the Cycle of Poverty
     </p>
   </footer>
+
+  <!-- 🔹 QR MODAL -->
+  <div id="qrModal"
+       class="hidden fixed inset-0 bg-black/80 flex items-center justify-center">
+    <div class="bg-gray-900 p-4 rounded-lg shadow-xl">
+      <img id="qrImage" src="" class="w-64 mx-auto mb-4">
+      <button onclick="closeQR()"
+        class="w-full border border-gray-500 rounded-md py-2">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- 🔹 QR & Copy Script -->
+  <script>
+    function copyNumber(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text);
+      alert("Copied: " + text);
+    }
+
+    const qrList = {
+      bkashQR: "qr/bkash.png",
+      nagadQR: "qr/nagad.png"
+    };
+
+    function openQR(key) {
+      document.getElementById("qrImage").src = qrList[key];
+      document.getElementById("qrModal").classList.remove("hidden");
+    }
+
+    function closeQR() {
+      document.getElementById("qrModal").classList.add("hidden");
+    }
+  </script>
 
 </body>
 </html>
